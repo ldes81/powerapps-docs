@@ -101,7 +101,7 @@ Note classic visibility rules will also be supported soon within modern commands
 |Reference the control context|EntityRule|Form. HomePageGrid. SubGridStandard. SubGridAssociated|Self.Selected|
 |Table metadata properties|EntityPropertyRule| |DataSourceInfo()|
 |Show / hide based on form state. For example, show for the create form|FormStateRule|Create. Existing. ReadOnly. Disabled. BulkEdit|Self.Selected.State = FormMode.New|
-|Show when > 1 records are selected in a grid|SelectionCountRule| |CountRows(Self.Selected.Items) > 1|
+|Show when > 1 records are selected in a grid|SelectionCountRule| |CountRows(Self.Selected.AllItems) = 1|
 |Show / hide for a related table in a polymorphic lookup. For example, check whether the lookup is a user OR a team|CustomRule|PrimaryEntityTypeCode|IsType(), AsType|
 |Reference environment properties (Org)|CustomRule|OrgName. OrgLcid. UserLcid|Not currently available|
 
